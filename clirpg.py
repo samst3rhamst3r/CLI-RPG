@@ -50,6 +50,12 @@ while True:
         print("The dragon has eaten you. You lose...")
         break
     
+    elif look_around and sword_acquired:
+
+        print("You have already searched this room. Let's return.")
+        look_around = False
+        ret = True
+    
     elif look_around:
 
         sword_acquired = (get_user_input("You have found a sword! Do you (t)ake it or (l)eave it?: ", "tl") == "t")
